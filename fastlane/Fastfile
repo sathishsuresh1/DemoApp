@@ -1,0 +1,16 @@
+default_platform(:ios)
+
+platform :ios do
+  desc "Build the iOS app and export the IPA"
+  lane :build do
+    increment_build_number(
+      xcodeproj: "DemoApp.xcodeproj" # Replace with your actual project name
+    )
+    gym(
+      scheme: "SampleApp", # Replace with your actual scheme
+      export_method: "app-store", # or "ad-hoc" if you are using Ad Hoc distribution
+      output_directory: "./build" # Folder to store the IPA
+    )
+  end
+end
+
