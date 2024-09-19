@@ -7,7 +7,7 @@ platform :ios do
       xcodeproj: "DemoApp.xcodeproj" # Replace with your actual project name
     )
     gym(
-      scheme: "SampleApp", # Replace with your actual scheme
+      scheme: "DemoApp", # Replace with your actual scheme
       export_method: "app-store", # or "ad-hoc" if you are using Ad Hoc distribution
       output_directory: "./build" # Folder to store the IPA
     )
